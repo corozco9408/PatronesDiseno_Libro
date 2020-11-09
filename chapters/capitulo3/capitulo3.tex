@@ -1,0 +1,36 @@
+\pagelayout{wide} % No margins
+\addpart{Capítulo 2: Patrones creacionales}
+\pagelayout{margin} % Restore margins
+
+
+\setchapterpreamble[u]{\margintoc}
+\chapter{Patrones Creacionales}
+\labch{cap3}
+
+\section{{¿Qué son los patrones creacionales?}}
+
+Los patrones de diseño creacionales se centran en abstraer el proceso de creación e instanciación de los objetos con el propósito permitir al sistema ser independiente a la forma en la cual los objetos o estructuras de objetos complejos son creados y representados en el dominio de nuestra aplicación. Generalmente, los patrones creacionales son utilizados con el objetivo de separar la lógica encargada de la creación de objetos y encapsularla para ser reutilizada de manera transversal.
+
+Estos patrones se rigen bajo dos ideas principales que hacen posible su reutilización independiente de la tecnología, enfoque o lenguaje de programación orientado a objetos: (i) encapsular el conocimiento y la lógica detrás de la creación de objetos y (ii) ocultar el mecanismo utilizado para su instanciación. Gracias a ello, los patrones creacionales permiten que la implementación sea transparente para el desarrollador, ofreciendo las herramientas necesarias para definir como, cuando, por qué y para qué se crea un objeto o una estructura de datos compleja, lo cual garantiza que las soluciones sean altamente flexibles.
+
+\section{¿Por qué debería usar patrones creacionales?}
+
+Durante el proceso de desarrollo de proyectos de software, nos encontramos de manera frecuente con que cada desarrollador aplica su propia lógica al momento de realizar una implementación, lo cual es entendible ya que cada persona es un mundo y tiene la capacidad de resolver un problema de muchas maneras diferentes. Sin embargo, cuando nos enfrentamos a dominios específicos nos damos cuenta que muchas veces el desarrollo de software se encuentra con problemas comunes y recurrentes que pueden ser abstraidos y agrupados en estructuras transversales que puedan ser reutilizadas por otros. Sunpongamos que nuestra aplicación requiere crear una instancia unica e inmutable que pueda ser accedida de manera global, o necesitamos crear/clonar un objeto complejo sin preocuparnos por su estructura interna; en estos casos y en muchos otros, los patrones creacionales nos ofrecen la herramientas necesarias para crear e instanciar objetos de manera transparente y reutilizable sin preocuparnos por la lógica interna de los objetos y clases involucrados.
+
+En general, algunos de los escenarios mas comunes en los que es recomendable utilizar los patrones creacionales son:
+
+\begin{itemize}
+	\item Al sistema no le interesa conocer la forma en la cual se crean los objetos que va a utilizar.
+	\item Es necesario crear diferentes representaciones de un objeto complejo.
+	\item Se requiere realizar la instanciación de estructuras de datos complejas en tiempo de ejecución
+	\item El sistema solo necesita una instancia que pueda ser accedida de manera global por toda la aplicación
+	\item La instanciación de nuevos objetos debe ser flexible sin modificar las estructuras existentes.
+\end{itemize}
+
+\section{Patrones existentes}
+
+A continuación, se presentarán de manera ordenada cada uno de los patrones creacionales de acuerdo a su definición, motivación, como lograr la definición del patrón, las situaciones en las cuales se recomienda su aplicación, diseño en UML, un ejemplo conceptual (no necesariamente relacionado a un problema informático) y su implementación práctica paso a paso con el objetivo de comprender el patrón a un mayor nivel de detalle.
+
+\input{chapters/capitulo3/singleton.tex}
+\input{chapters/capitulo3/prototype.tex}
+\input{chapters/capitulo3/builder.tex}
